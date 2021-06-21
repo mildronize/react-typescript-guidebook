@@ -1,5 +1,7 @@
 # React TypeScript in Action 2021
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7ca8286b-aa8b-4d39-b903-7988ebe7c77c/deploy-status)](https://app.netlify.com/sites/react-typescript-guidebook/deploys)
+
 ## Welcome
 
 React in action, that provides React, Redux (Redux Toolkits), TypeScript, and Material UI
