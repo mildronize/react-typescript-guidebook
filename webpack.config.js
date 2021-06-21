@@ -10,9 +10,8 @@ const entries = {};
 const nonWebpackedEntries = [];
 
 function isValidLessonFolder(folder) {
-  return folder.includes('action');
-  // return folder.includes('action') || folder.includes('playground') || folder.includes('bonus');
-}
+  return folder.includes('action') || folder.includes('cookbook');
+  }
 
 function* getEntryPoint(step) {
   if (isValidLessonFolder(step)) {

@@ -9,7 +9,7 @@ body {
 body.react-in-action {
   display: flex;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.5;
 }
 
 #app {

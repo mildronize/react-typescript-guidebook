@@ -10,7 +10,7 @@ let index = 0;
 export const TodoApp = () => {
 
   const [todos, setTodos] = useState({} as Todos);
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState('all' as FilterTypes);
 
   const _addTodo = label => {
     const id = index++;
