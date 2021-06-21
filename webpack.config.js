@@ -50,7 +50,6 @@ fs.readdirSync('./').filter(step => {
 
 module.exports = function (env, argv) {
   return {
-    // entry: { ...entries },
     entry: { ...entries, markdownReadme: './markdownReadme/src/index.ts' },
     module: {
       rules: [
@@ -77,7 +76,6 @@ module.exports = function (env, argv) {
           template: path.join(__dirname, entry, 'index.html'),
           filename: `${entry}/index.html`,
           chunks: [entry, 'markdownReadme']
-          // chunks: [entry]
         });
       }),
       new CopyWebpackPlugin([
