@@ -20,7 +20,10 @@ Use template from https://github.com/microsoft/frontend-bootcamp
 - HTML, JavaScript, CSS, Basic React, Functional Component, Hook
 
 ## Contents
-1. Introduction to React with TypeScript
+1. [Introduction to React with TypeScript](action-01)
+2. N/A
+3. N/A
+4. [React Component](action-04) - Basic Todo using Component Composition
 
 ## Additional resources
 
