@@ -16,7 +16,7 @@ function isValidLessonFolder(folder) {
 
 function* getEntryPoint(step) {
   if (isValidLessonFolder(step)) {
-    for (let prefix of ['', 'demo/']) {
+    for (let prefix of ['', 'final/']) {
       for (let suffix of ['.js', '.jsx', '.ts', '.tsx']) {
         const entryRequest = `./${step}/${prefix}src/index${suffix}`;
         if (fs.existsSync(entryRequest)) {

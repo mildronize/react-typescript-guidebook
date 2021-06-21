@@ -25,7 +25,7 @@ export const  TodoHeader: React.FC<TodoHeaderProps> = (props: TodoHeaderProps) =
 
     return (
       <header>
-        <h1>todos <small>(1.7 final)</small></h1>
+        <h1>todos</h1>
         <div className="addTodo">
           <input value={labelInput} onChange={_onChange} className="textfield" placeholder="add todo" />
           <button onClick={_onAdd} className="submit">
