@@ -1,4 +1,4 @@
-# React in Action 2021
+# React TypeScript in Action 2021
 
 ## Welcome
 
