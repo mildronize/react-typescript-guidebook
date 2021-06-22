@@ -40,7 +40,7 @@ fs.readdirSync('./').filter(step => {
 
   if (!isEntryPoint && isValidLessonFolder(step)) {
     nonWebpackedEntries.push(step);
-  } 
+  }
   // else if (step === 'step1-04') {
   //   // special case: this folder's `final` has code, but its `demo` doesn't
   //   nonWebpackedEntries.push('step1-04/demo');
@@ -108,7 +108,7 @@ module.exports = function (env, argv) {
       ]),
       new ForkTsCheckerWebpackPlugin({
         silent: true,
-        async: false
+        // async: false
       })
     ],
     resolve: {
@@ -126,9 +126,10 @@ module.exports = function (env, argv) {
       contentBase: path.resolve(__dirname),
       watchContentBase: true,
       watchOptions: {
-        ignored: /tmp.json/
+        // ignored: /tmp.json/
+        ignored: ['node_modules','.git','.idea']
       },
-      hot: false,
+      hot: true,
       stats: 'errors-only',
       overlay: true,
       inline: true
