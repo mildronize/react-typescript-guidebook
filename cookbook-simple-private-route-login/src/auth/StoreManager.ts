@@ -12,12 +12,10 @@ export class StoreManager {
 
     subscribe(callback): number {
         this._callbacks.push({ callback, subscription: this._nextSubscriptionId++ });
-        console.log(this._callbacks);
         return this._nextSubscriptionId - 1;
     }
 
     unsubscribe(subscriptionId): void {
-        console.log(this._callbacks);
         const subscriptionIndex = this._callbacks
             .map((element, index) => element.subscription === subscriptionId ? { found: true, index } : { found: false })
             .filter(element => element.found === true);
@@ -29,6 +27,7 @@ export class StoreManager {
     }
 
     notifySubscribers(): void{
+        console.log(this._callbacks.length);
         for (let i = 0; i < this._callbacks.length; i++) {
             const callback = this._callbacks[i].callback;
             callback();

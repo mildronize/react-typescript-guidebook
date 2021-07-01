@@ -1,13 +1,16 @@
 import React from 'react';
-import './App.css';
-import Login from './Login';
-import LoginSuccess from './LoginSuccess';
-
 import {
   HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+
+import './App.css';
+import Login from './auth/Login';
+import LoginSuccess from './auth/LoginSuccess';
+import LoginFailed from './auth/LoginFailed';
+import PrivateRoute from './auth/PrivateRoute';
+
 
 function App() {
 
@@ -16,7 +19,8 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Login} />
-        <Route exact path="/success" component={LoginSuccess} />
+        <PrivateRoute exact path="/success" component={LoginSuccess} />
+        <Route exact path="/failed" component={LoginFailed} />
       </Switch>
     </Router>
 

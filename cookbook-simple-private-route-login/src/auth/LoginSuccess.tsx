@@ -4,7 +4,9 @@ function LoginSuccess() {
 
     return (
         <div className="container">
-           Success
+           Login Success
+
+           <p>  <button onClick={() => location.href="#/"}>Logout</button></p>
         </div>
 
     );
