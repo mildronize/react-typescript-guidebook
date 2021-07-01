@@ -27,7 +27,6 @@ export class StoreManager {
     }
 
     notifySubscribers(): void{
-        console.log(this._callbacks.length);
         for (let i = 0; i < this._callbacks.length; i++) {
             const callback = this._callbacks[i].callback;
             callback();

@@ -1,20 +1,28 @@
 import { StoreManager } from "./StoreManager";
 import { signInSlient } from "./MockApi";
 
-export class AuthService extends StoreManager{
+export class AuthService extends StoreManager {
 
-    private authenticated: boolean = false;
+  private authenticated: boolean = false;
 
-    async signIn(){
-        this.authenticated = (await signInSlient()).data;
-        console.log("sign in");
-        this.notifySubscribers();
+  async signIn(username: string, password: string) {
+    if (!this.authenticated) {
+      this.authenticated = (await signInSlient({ username, password})).data;
+      this.notifySubscribers();
+
+      return this.authenticated;
     }
+  }
 
-    async isAuthenticated() {
-        await this.signIn();
-        return this.authenticated;
-    }
+  async isAuthenticated() {
+    // await this.signIn();
+    return this.authenticated;
+  }
+
+  signOut(){
+    this.authenticated = false;
+    this.notifySubscribers();
+  }
 
 }
 

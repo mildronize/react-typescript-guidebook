@@ -6,11 +6,12 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import Login from './auth/Login';
-import LoginSuccess from './auth/LoginSuccess';
-import LoginFailed from './auth/LoginFailed';
+// import LoginForm from './auth/LoginForm';
+import Profile from './Profile';
 import PrivateRoute from './auth/PrivateRoute';
-
+import { ApplicationPaths } from './auth/constants';
+import AuthRoutes from './auth/AuthRoutes';
+import Home from './Home';
 
 function App() {
 
@@ -18,9 +19,12 @@ function App() {
 
     <Router>
       <Switch>
-        <Route exact path="/" component={Login} />
-        <PrivateRoute exact path="/success" component={LoginSuccess} />
-        <Route exact path="/failed" component={LoginFailed} />
+        <Route exact path="/" component={Home} />
+        <PrivateRoute exact path="/profile" component={Profile} />
+        <Route
+          path={ApplicationPaths.AuthorizationPrefix}
+          component={AuthRoutes}
+        />
       </Switch>
     </Router>
 
