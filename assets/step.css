@@ -33,6 +33,17 @@ body.react-in-action {
   overflow: auto;
 }
 
+@media only screen and (max-width: 600px) {
+  body.react-in-action {
+    flex-wrap: wrap;
+  }
+
+  #markdownReadme {
+    height: auto;
+    overflow:hidden;
+  }
+}
+
 #markdownReadme.exercise {
   background-color: #ecf6fd;
 }
