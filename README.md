@@ -38,6 +38,9 @@ Use template from https://github.com/microsoft/frontend-bootcamp
 - [React & Redux in TypeScript - Complete Guide](https://github.com/piotrwitek/react-redux-typescript-guide)
 - [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 
+## Todo
+- [ ] Add Test
+
 ## Contributing
 
 This project welcomes contributions and suggestions. 
