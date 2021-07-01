@@ -1,0 +1,34 @@
+.action-bar{
+    margin-bottom: 30px;
+}
+
+button{
+    border-radius: 3px;
+    color: rgb(112, 76, 182);
+    padding-bottom: 4px;
+    background-color: rgba(112, 76, 182, 0.1);
+    border-radius: 2px;
+    padding: 15px;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.subscribe-button{
+    color: #fff;
+    background: #333;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
