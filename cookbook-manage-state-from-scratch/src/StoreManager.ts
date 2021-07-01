@@ -1,6 +1,6 @@
 // From dotnet new react -au individual
 
-export class StateManager {
+export class StoreManager {
 
     private _callbacks: any[];
     private _nextSubscriptionId: number;
@@ -36,6 +36,3 @@ export class StateManager {
     }
 
 }
-
-const stateManager = new StateManager();
-export default stateManager;

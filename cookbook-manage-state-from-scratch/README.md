@@ -26,10 +26,10 @@ const Counter = () => {
 }
 ```
 
-StateManager.tsx
+StoreManager.ts
 
 ```js
-export class StateManager {
+export class StoreManager {
 
     private _callbacks: any[];
     private _nextSubscriptionId: number;
@@ -65,18 +65,15 @@ export class StateManager {
     }
 
 }
-
-const stateManager = new StateManager();
-export default stateManager;
 ```
 
-CounterStore.tsx
+CounterStore.ts
 
 ```js
-import { StateManager } from "./StateManager";
+import { StoreManager } from "./StoreManager";
 import { fetchCount } from "./MockApi";
 
-export class CounterStore extends StateManager{
+export class CounterStore extends StoreManager{
     private counter: number = 0;
 
     increase(){

@@ -1,7 +1,7 @@
-import { StateManager } from "./StateManager";
+import { StoreManager } from "./StoreManager";
 import { fetchCount } from "./MockApi";
 
-export class CounterStore extends StateManager{
+export class CounterStore extends StoreManager{
     private counter: number = 0;
 
     increase(){
