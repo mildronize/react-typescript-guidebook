@@ -1,0 +1,58 @@
+.action-bar{
+    margin-bottom: 30px;
+}
+
+button{
+    border-radius: 3px;
+    color: rgb(112, 76, 182);
+    padding-bottom: 4px;
+    background-color: rgba(112, 76, 182, 0.1);
+    border-radius: 2px;
+    padding: 15px;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10 0px;
+}
+
+.subscribe-button{
+    color: #fff;
+    background: #333;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .error-msg{
+    color: red;
+  }
