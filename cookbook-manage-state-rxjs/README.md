@@ -1,19 +1,20 @@
-# Cookbook: Counter App - Manage global state with RX.js
+# Cookbook: Counter App - Manage global state with RX.js (Using state from outside and force update render)
 
 ```javascript
+import useForceUpdate from 'use-force-update';
 import { CounterStore } from './CounterStore';
 
 let counterStore = new CounterStore();
 
 const Counter = () => {
-
-  const [value, setValue] = useState(0);
+  
+  const forceUpdate = useForceUpdate();
 
   useEffect(() => {
     counterStore = new CounterStore();
     counterStore.getSubject().subscribe({
       next: (v) => {
-        setValue(counterStore.getCounter());
+        forceUpdate();
         console.log(`Set local state with : ${v}`);
       }
     });
@@ -26,12 +27,13 @@ const Counter = () => {
 
   return (
     <>
-      <h1>{value} </h1>
+      <h1>{counterStore.getCounter()}</h1>
       <button onClick={() => counterStore.increase()} >+ 1</button>
       <button className="asyncButton" onClick={() => counterStore.increaseAsync()} >+ 1 Async</button>
     </>
   )
 }
+
 ```
 
 CounterStore.ts using `rxjs`
