@@ -2267,6 +2267,11 @@ ignore@^3.3.5:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
   integrity sha512-Pgs951kaMm5GXP7MOvxERINe3gsaVjUWFm+UZPSq9xYriQAksyhg0csnS0KXSNRD5NmNdapXEpjxG49+AKh/ug==
 
+"immer@1.8.0 - 7":
+  version "7.0.15"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-7.0.15.tgz#dc3bc6db87401659d2e737c67a21b227c484a4ad"
+  integrity sha512-yM7jo9+hvYgvdCQdqvhCNRRio0SCXc8xDPzA25SvKWa7b1WVPjLwQs1VYU5JPXjcJPTqAa5NP5dqpORGYBQ2AA==
+
 immer@^9.0.1:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.3.tgz#146e2ba8b84d4b1b15378143c2345559915097f4"
@@ -3600,6 +3605,13 @@ punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+pure-store@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/pure-store/-/pure-store-1.2.0.tgz#23df0dac0dfbb1446f7c0f479ab5af865f78796d"
+  integrity sha512-pOJhlWJZ8Z0hq+q/EhRpQes06ZyYZgdnNd4PWXWD30U7VW0t95EBZ1ty0pVSgUvQifiPp3Z0M7YDBa6rZiKphg==
+  dependencies:
+    immer "1.8.0 - 7"
 
 qs@6.7.0:
   version "6.7.0"
