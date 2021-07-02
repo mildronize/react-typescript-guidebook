@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { ApplicationPaths } from './auth/constants';
 
 function Profile() {
 
   const handleLogout = () => {
-    location.href = "#/";
+    location.href = `#${ApplicationPaths.Logout}`;
   };
 
   return (

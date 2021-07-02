@@ -1,15 +1,22 @@
 
 import React, { useEffect, useState } from 'react';
+import authService from './AuthService';
+import { ApplicationPaths } from './constants';
 
 function Logout() {
 
-    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault();
-        location.href="#/success";
+    useEffect(()=> {
+      populateLogoutState();
+    }, []);
+
+    const populateLogoutState = () => {
+      authService.signOut();
+      location.href = `#${ApplicationPaths.Login}`;
     }
 
     return (
         <div className="container">
+          loading...
         </div>
     );
 }

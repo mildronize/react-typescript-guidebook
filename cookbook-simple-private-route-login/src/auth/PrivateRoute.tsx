@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import authService from './AuthService';
 import { Route, Redirect } from 'react-router-dom';
-import { ApplicationPaths, LoginActions } from './constants';
+import { ApplicationPaths } from './constants';
 
 const redirectUrl = `${ApplicationPaths.Login}`;
 

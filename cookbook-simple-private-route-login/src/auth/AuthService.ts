@@ -15,7 +15,6 @@ export class AuthService extends StoreManager {
   }
 
   async isAuthenticated() {
-    // await this.signIn();
     return this.authenticated;
   }
 

@@ -1,30 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import authService from "./AuthService";
-import { ApplicationPaths, LoginActions } from "./constants";
-interface PropType {
-  action: string;
-}
 
-const Login = ({ action, ...props }: PropType) => {
+const Login = () => {
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    init();
-  }, []);
-
-  const init = () => {
-    switch (action) {
-      case LoginActions.Login:
-        login();
-        break;
-      // case LoginActions.LoginCallback:
-      //   processLoginCallback();
-      //   break;
-      default:
-        throw new Error(`Invalid Login action '${action}'`);
-    }
-  };
+  const [error, setError] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
@@ -32,22 +14,14 @@ const Login = ({ action, ...props }: PropType) => {
     const password = passwordRef.current.value;
     setLoading(true);
     const result = await authService.signIn(username, password);
+    setError(!result);
     setLoading(false);
     if (result) {
       location.href = "#/profile";
     } else {
-      location.href = `#${ApplicationPaths.Login.substring(1)}`;
+      setMessage("Username or Password wrong");
     }
   }
-
-  // const processLoginCallback = async () => {
-  //   const url = window.location.href;
-  //   const result = await authService.completeSignIn(url);
-  // }
-
-  const login = async () => {
-    // await authService.signIn();
-  };
 
   return <> <div className="container">
     <h1>Login Demo (Private Route)</h1>
@@ -57,9 +31,6 @@ const Login = ({ action, ...props }: PropType) => {
     <label htmlFor="psw"><b>Password</b></label>
     <input ref={passwordRef} type="password" placeholder="Enter Password" name="psw" required />
 
-    <p>
-      For login
-    </p>
     <p>User: demo, Password: demo</p>
 
     <p>
@@ -67,6 +38,7 @@ const Login = ({ action, ...props }: PropType) => {
     </p>
 
     {loading && <div className="loader"></div>}
+    {!loading && error && <div className="error-msg">{message}</div>}
   </div>
   </>;
 };
