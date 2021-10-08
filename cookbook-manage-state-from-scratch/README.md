@@ -1,5 +1,12 @@
 # Cookbook: Counter App - Manage global state from scratch using publish/subscribe
 
+## Ref: 
+- The Observer Pattern in JavaScript — the Key to a Reactive Behavior: https://blog.bitsrc.io/the-observer-pattern-in-javascript-the-key-to-a-reactive-behavior-f28236e50e10
+
+![image from above site](https://user-images.githubusercontent.com/3647850/136561959-1a800eda-142c-4f41-80f6-3a5f03f12d8b.png)
+
+## Files:
+
 Counter.tsx
 
 ```jsx
